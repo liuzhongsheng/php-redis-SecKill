@@ -151,7 +151,7 @@ class RedisSecKill
     public function panicBuying($inventoryKey, $data)
     {
         #开始抢购，检测库存
-        $inventoryNumber = $thnis->redis->get($inventoryKey);
+        $inventoryNumber = $this->redis->get($inventoryKey);
         if ($inventoryNumber == null || $inventoryNumber == 0) {
             return '-1';
         }
